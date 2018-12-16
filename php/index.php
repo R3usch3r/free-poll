@@ -31,7 +31,6 @@ echo "Connected successfully";
 $token = $_POST['wasauchimmer'];
 $neuerWert = $_POST['slink'];
 
-
 // New Value for Link
 $sql = "UPDATE polls SET url='$neuerWert' WHERE url='$token'";
 if (mysqli_query($con, $sql)) {
