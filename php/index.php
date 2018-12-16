@@ -13,6 +13,7 @@
 $servername = "localhost";
 $username = "username";
 $password = "password";
+$connection = mysqli_connect("localhost", "username", "password")
 
 // Create connection
 $conn = mysqli_connect($servername, $username, $password);
@@ -26,6 +27,7 @@ echo "Connected successfully";
 
 <input type="text" name="slink" value="<?php echo $token; ?>">
 <input type="submit">
+
 $token = $_POST['wasauchimmer'];
 $neuerWert = $_POST['slink'];
 
@@ -38,6 +40,6 @@ if (mysqli_query($con, $sql)) {
     echo "Error updating record: " . mysqli_error($con);
 }
 ?>
-
+mysqli_close($connection);
 </body>
 </html>
