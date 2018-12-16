@@ -9,6 +9,32 @@
 </head>
 
 <body>
+<?php
+$servername = "localhost";
+$username = "username";
+$password = "password";
+
+// Create connection
+$conn = mysqli_connect($servername, $username, $password);
+
+// Check connection
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+
+echo "Connected successfully";
+
+$token = $_POST['wasauchimmer'];
+$neuerWert = $_POST['asdf'];
+
+// New Value for Link
+$sql = "UPDATE polls SET url='$neuerWert' WHERE url='$token'";
+if (mysqli_query($con, $sql)) {
+    echo "Record updated successfully";
+} else {
+    echo "Error updating record: " . mysqli_error($con);
+}
+?>
 
 <table>
     <thead>
