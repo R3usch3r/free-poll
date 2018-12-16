@@ -13,7 +13,6 @@
 $servername = "localhost";
 $username = "username";
 $password = "password";
-$connection = mysqli_connect("localhost", "username", "password")
 
 // Create connection
 $conn = mysqli_connect($servername, $username, $password);
@@ -22,14 +21,11 @@ $conn = mysqli_connect($servername, $username, $password);
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
-
 echo "Connected successfully";
 
-
 $token = $_POST['wasauchimmer'];
-$neuerWert = $_POST['slink'];
+$neuerWert = $_POST['asdf'];
 
-// New Value for Link
 $sql = "UPDATE polls SET url='$neuerWert' WHERE url='$token'";
 if (mysqli_query($con, $sql)) {
     echo "Record updated successfully";
@@ -37,6 +33,5 @@ if (mysqli_query($con, $sql)) {
     echo "Error updating record: " . mysqli_error($con);
 }
 ?>
-mysqli_close($connection);
 </body>
-</html>
+</html
