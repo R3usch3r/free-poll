@@ -25,8 +25,6 @@ if (!$conn) {
 
 echo "Connected successfully";
 
-<input type="text" name="slink" value="<?php echo $token; ?>">
-<input type="submit">
 
 $token = $_POST['wasauchimmer'];
 $neuerWert = $_POST['slink'];
